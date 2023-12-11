@@ -16,7 +16,8 @@ endif
 init:
 	python -m pip install --upgrade pip
 	python -m pip install -e .[dev]
-	python -m pip install -e .[server]
+	python -m pip install -e .[a_sqlite]
+	python -m pip install -e .[a_postgres]
 
 
 all: lint test
@@ -32,13 +33,13 @@ sdist:
 
 lint:
 	@python -m isort --check $(MODULE_NAME)  ||  echo "isort:   FAILED!"
-	@python -m black --check --line-length=79 --quiet $(MODULE_NAME) || echo "black:   FAILED!"
+	@python -m black --check --quiet $(MODULE_NAME) || echo "black:   FAILED!"
 	@python -m flake8 $(MODULE_NAME)  || echo "flake8:  FAILED!"
 
 
 delint:
 	python -m isort $(MODULE_NAME)
-	python -m black --line-length=79 $(MODULE_NAME)
+	python -m black $(MODULE_NAME)
 
 
 typecheck:

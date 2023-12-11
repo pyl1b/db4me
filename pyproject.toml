@@ -7,16 +7,22 @@ authors = [{name = "Nicu Tofan", email = "nicu.tofan@gmail.com"}]
 readme = "README.md"
 requires-python = ">=3.9"
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License",
+    "Development Status :: 3 - Alpha",
+    "Topic :: Database",
+    "Typing :: Typed",
 ]
 dependencies = [
-    "attrs==23.1.0",
+    "SQLAlchemy>=2.0.23",
+    "pydantic>=2.5.2",
 ]
 
 
 [project.optional-dependencies]
+a-sqlite = ["aiosqlite>=0.18.0"]
+a-postgres = ["asyncpg>=0.29.0"]
 dev = [
     "black",
     "flake8",
@@ -70,7 +76,7 @@ src_paths = "db4me"
 known_first_party = "db4me"
 
 
-[tools.black]
+[tool.black]
 
 # Standard black line length is 88
 line-length = 80
@@ -83,6 +89,14 @@ target-version = ['py39', 'py310', 'py311']
 testpaths = [
     "db4me",
 ]
+python_files = [
+    "test_*.py", "*_test.py",
+    "tests_*.py", "*_tests.py",
+    "spec_*.py", "*_spec.py",
+    "specs_*.py", "*_specs.py",
+]
+python_classes = ["Test", "Acceptance"]
+python_functions = ["test"]
 
 
 [tool.mypy]
