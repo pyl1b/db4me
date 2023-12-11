@@ -52,3 +52,6 @@ test: lint typecheck
 		--cov-report html \
 		--cov-config=.coveragerc \
 		--cov=$(MODULE_NAME) $(MODULE_NAME)/
+
+build:
+	python -m build
