@@ -18,6 +18,7 @@ init:
 	python -m pip install -e .[dev]
 	python -m pip install -e .[a_sqlite]
 	python -m pip install -e .[a_postgres]
+	pre-commit install
 
 
 all: lint test
