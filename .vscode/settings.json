@@ -1,6 +1,17 @@
 {
     "cSpell.words": [
         "aiosqlite",
-        "poolclass"
+        "arithmatex",
+        "fontawesome",
+        "highlightjs",
+        "inlinehilite",
+        "linenums",
+        "materialx",
+        "mkdocs",
+        "mkdocstrings",
+        "noopener",
+        "poolclass",
+        "pymdownx",
+        "superfences"
     ]
 }

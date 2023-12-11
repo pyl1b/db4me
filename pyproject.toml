@@ -47,7 +47,17 @@ tests = [
     "twine",
     "wheel",
 ]
-
+docs = [
+    "mkdocs",
+    "markdown-include",
+    "mkdocs-material",
+    "mkdocs-material[imaging]",
+    "mkdocstrings",
+    "mkdocstrings[python]",
+    "pymdown-extensions",
+    "pillow",
+    "cairosvg",
+]
 
 [build-system]
 build-backend = "setuptools.build_meta"

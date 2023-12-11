@@ -16,6 +16,7 @@ endif
 init:
 	python -m pip install --upgrade pip
 	python -m pip install -e .[dev]
+	python -m pip install -e .[docs]
 	python -m pip install -e .[a_sqlite]
 	python -m pip install -e .[a_postgres]
 	pre-commit install
@@ -56,3 +57,11 @@ test: lint typecheck
 
 build:
 	python -m build
+
+
+build-docs:
+	python -m mkdocs build
+
+
+view-docs:
+	python -m mkdocs serve
