@@ -10,7 +10,25 @@ python -m pip install db4me
 
 ## Usage
 
-TBD
+Include the database settings into your model and, at application
+start-up time, create the connection based on these settings.
+
+```python
+from pydantic_settings import BaseSettings
+from db4me import AllDatabaseSettings, get_engine
+
+
+class AppSettings(BaseSettings):
+    # ...
+    database: AllDatabaseSettings = Field(
+        description="Database settings.",
+    )
+    # ...
+
+
+settings = AppSettings()
+engine = get_engine(settings.database)
+```
 
 ## Development
 
