@@ -25,23 +25,25 @@ a-sqlite = ["aiosqlite>=0.18.0"]
 a-postgres = ["asyncpg>=0.29.0"]
 dev = [
     "black",
+    "build",
     "flake8",
     "isort",
     "mypy",
+    "pre-commit",
+    "pyproject-flake8",
+    "pytest-asyncio",
     "pytest-cov",
     "pytest-mock",
-    "pytest-asyncio",
     "pytest",
     "twine",
     "wheel",
-    "pre-commit",
-    "build"
 ]
 tests = [
     "black",
     "flake8",
     "isort",
     "mypy",
+    "pyproject-flake8",
     "pytest-cov",
     "pytest-mock",
     "pytest",
@@ -49,15 +51,15 @@ tests = [
     "wheel",
 ]
 docs = [
-    "mkdocs",
+    "cairosvg",
     "markdown-include",
     "mkdocs-material",
     "mkdocs-material[imaging]",
+    "mkdocs",
     "mkdocstrings",
     "mkdocstrings[python]",
-    "pymdown-extensions",
     "pillow",
-    "cairosvg",
+    "pymdown-extensions",
 ]
 
 [build-system]
@@ -70,7 +72,7 @@ include-package-data = true
 
 
 [tool.setuptools.packages.find]
-exclude = ["venv*", "scripts", "playground", "tests", "docs", "build", "dist"]
+exclude = ["venv*", "playground*"]
 
 
 [tool.setuptools_scm]
