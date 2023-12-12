@@ -1,3 +1,4 @@
+import pytest
 from sqlalchemy import Engine, text
 from sqlalchemy.ext.asyncio import AsyncEngine
 from sqlalchemy.pool.impl import SingletonThreadPool
@@ -20,6 +21,7 @@ def test_get_engine_sync():
         conn.execute(text("INSERT INTO test VALUES (1);"))
 
 
+@pytest.mark.asyncio
 async def test_get_engine_async():
     """
     Test get_engine with an async engine.

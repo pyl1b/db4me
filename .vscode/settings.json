@@ -2,6 +2,7 @@
     "cSpell.words": [
         "aiosqlite",
         "arithmatex",
+        "cairocffi",
         "fontawesome",
         "highlightjs",
         "inlinehilite",
@@ -10,8 +11,14 @@
         "mkdocs",
         "mkdocstrings",
         "noopener",
+        "pipwin",
         "poolclass",
         "pymdownx",
         "superfences"
-    ]
+    ],
+    "python.testing.pytestArgs": [
+      "db4me"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }
