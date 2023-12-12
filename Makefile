@@ -55,7 +55,7 @@ test: lint typecheck
 		--cov-config=.coveragerc \
 		--cov=$(MODULE_NAME) $(MODULE_NAME)/
 
-build:
+build-dist:
 	python -m build
 
 
